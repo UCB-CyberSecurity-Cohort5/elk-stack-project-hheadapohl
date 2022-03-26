@@ -48,60 +48,43 @@ You have 2 H1 headings. You may want to use the "H1 -> H2" option to demote all 
 # Day 1:
 
 Step1: Create New Virtual Network in different region
-
-
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/Day1_Step1_Create_Vnet.png "image_tooltip")
+
 Step1: Create Peer Connection Between Vnets
+![alt_text](images/Day1_Step1_Vnet_Peer_Connection_Established.png "image_tooltip")
 
 Step2: Log into ansible container in JumpBox
+![alt_text](images/Day1_Step2_attach_ansible_container.png "image_tooltip")
 
 Step2: Get ssh public key from ansible container
+![alt_text](images/Day1_Step2_get_ansible_ssh_key.png "image_tooltip")
 
 Step2: Create new ELK-SERVER Vm
-
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.png "image_tooltip")
-
+![alt_text](images/Day1_Step2_create_elk_vm_settings.png "image_tooltip")
 
 Step2: Ensure jumpbox can connect to ELK-SERVER
-
-
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image3.png "image_tooltip")
-
+![alt_text](images/Day1_Step2_ELK-SERVER_inbound_rule.png "image_tooltip")
 
 Step2: Test VM connection
+![alt_text](images/Day1_Step2_test_vm_ssh_connectivity.png "image_tooltip")
 
 Step3: Modify ansible hosts file to create [elk] group with ELK-SERVER’s IP
+![alt_text](images/Day1_Step3_modify_ansible_hosts.png "image_tooltip")
 
 Step3: Create ansible playbook to install elk stack on ELK-SERVER
+![alt_text](images/Day1_Step3_install-elk_yml.png "image_tooltip")
 
 Step4: Run the install-elk playbook by running **ansible-playbook install-elk.yml**
+![alt_text](images/Day1_Step4_run_install_elk_playbook.png "image_tooltip")
 
 Step4: SSH from ansible to ELK_SERVER and use sudo docker ps to verify that the elk container is running
+![alt_text](images/Day1_Step3_check_elk_running.png "image_tooltip")
 
 Step5: Add inbound rule to NSG to allow access to Kibana on port 5601
-
-
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image4.png "image_tooltip")
-
+![alt_text](images/Day1_Step5_allow_port_5601.png "image_tooltip")
 
 Step5: Log into Kibana on port 5601 from the local machine. Success!
+![alt_text](images/Day1_Step5_successful_kibana_webpage.png "image_tooltip")
 
 
 # Day 2
