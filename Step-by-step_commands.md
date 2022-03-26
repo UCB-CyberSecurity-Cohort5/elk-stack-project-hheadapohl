@@ -54,7 +54,7 @@ Step1: Create New Virtual Network in different region
 <p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image1.png "image_tooltip")
+![alt_text](images/images/Day1_Step1_Create_Vnet.png "image_tooltip")
 Step1: Create Peer Connection Between Vnets
 
 Step2: Log into ansible container in JumpBox
