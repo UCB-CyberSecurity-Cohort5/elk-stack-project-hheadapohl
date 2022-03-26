@@ -7,7 +7,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![Alt text](images/project1_network_diagram_HH.png?raw=true "Optional Title")
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the scripts folder may be used to install only certain pieces of it, such as Filebeat.
 
   - Install-elk.yml
   - filebeat-playbook.yml_
@@ -30,8 +30,8 @@ Load balancing ensures that the application will be highly resilient and availab
 The load balancer ensures the availability portion of the CIA triad by sharing the incoming traffic among multiple identical web servers.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems and system events, like attempted logins.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- Filebeat watches for changes in the file systems.
+- Metricbeat looks for changes in system parameters like CPU usage, failed ssh logins, and failed SUDO attempts.
 
 The configuration details of each machine may be found below.
 
@@ -47,7 +47,7 @@ The configuration details of each machine may be found below.
 
 The machines on the internal network are not exposed to the public Internet.
 
-Only the RedTeamLoadBalancer machine can accept connections from the Internet. Access to this machine is only allowed from the following IP address:
+Only the RedTeamLoadBalancer and ELK-SERVER machines can accept connections from the Internet. Access to this machine is only allowed from the following IP address:
 - 8.3.82.213
 
 Machines within the network can only be accessed by JumpBox (10.0.0.4) via a docker container running ansible.
@@ -93,9 +93,9 @@ These Beats allow us to collect the following information from each machine:
 In order to use these playbooks, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 
 SSH into the control node and follow the steps below:
-- Copy the install-elk.yml, filebeat-playbook.yml, and metricbeat-playbook.yml file to /etc/ansible/ in the ansible container.
-- Modify the ansible hosts file to specify a separate group of VMs [elk] with the elk machine's internal IP (10.1.0.4)
-- Update the filebeat-config.yml or metricbeat-config.yml files to include the proper host machine (10.1.0.4) under setup.kibana and output.elasticsearch 
+- Copy the install-elk.yml, filebeat-playbook.yml, and metricbeat-playbook.yml file to /etc/ansible/ in the ansible container. The easiest way to do this is to use git-clone and copy the files from this project's scripts directory.
+- Modify the ansible hosts file to specify a separate group of VMs [elk] with the elk machine's internal IP (10.1.0.4).
+- Update the filebeat-config.yml or metricbeat-config.yml files to include the proper host machine (10.1.0.4) under setup.kibana and output.elasticsearch. 
 - Run the playbooks in succession using ansible-playbook, and navigate to 104.40.87.198:5601 to check that the installation worked as expected.
 
 
