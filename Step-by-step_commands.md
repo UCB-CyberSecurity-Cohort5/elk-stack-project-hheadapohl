@@ -44,7 +44,8 @@
 
 ### Part 2: create and edit filebeat-config.yml
 ![alt_text](images/Day2_Part2_edit filebeat_config_yaml.png "image_tooltip")
-Change hosts to 10.1.0.4:9200
+
+### Change hosts to 10.1.0.4:9200
 ![alt_text](images/Day2_Part2_filebeat-config_changes.png "image_tooltip")
 
 ### Part 3: use touch to create filebeat-playbook.yml
