@@ -9,9 +9,10 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the scripts folder may be used to install only certain pieces of it, such as Filebeat.
 
-  - Install-elk.yml
-  - filebeat-playbook.yml_
-  - metricbeat-playbook.yml
+  - Install-elk-HH.yml
+  - filebeat-playbook_HH.yml_
+  - metricbeat-playbook_HH.yml
+  - metricbeat-config_HH.yml
 
 This document contains the following details:
 - Description of the Topology
