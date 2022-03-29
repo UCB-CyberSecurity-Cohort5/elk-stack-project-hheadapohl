@@ -43,6 +43,7 @@
 # Day 2
 
 ### Part 2: create and edit filebeat-config.yml
+
 ![alt_text](images/Day2_Part2_edit filebeat_config_yaml.png "image_tooltip")
 
 ### Change hosts to 10.1.0.4:9200
